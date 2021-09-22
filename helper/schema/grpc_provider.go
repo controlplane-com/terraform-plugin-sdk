@@ -1291,7 +1291,13 @@ func normalizeNullValues(dst, src cty.Value, apply bool) cty.Value {
 		dstEmpty := !dst.IsNull() && dst.IsKnown() && dst.LengthInt() == 0
 		srcEmpty := !src.IsNull() && src.IsKnown() && src.LengthInt() == 0
 
-		if (src.IsNull() && dstEmpty) || (srcEmpty && dst.IsNull()) {
+// 		if (src.IsNull() && dstEmpty) || (srcEmpty && dst.IsNull()) {
+// 			return src
+// 		}
+		
+		if src.IsNull() && dstEmpty {
+			return dst
+		} else if srcEmpty && dst.IsNull() {
 			return src
 		}
 	}
