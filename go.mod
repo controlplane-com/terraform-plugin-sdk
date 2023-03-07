@@ -31,7 +31,7 @@ require (
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/mitchellh/reflectwalk v1.0.2
 	github.com/zclconf/go-cty v1.8.4
-	golang.org/x/crypto v0.0.0-20210421170649-83a5a9bb288b
-	golang.org/x/tools v0.0.0-20200713011307-fd294ab11aed
+	golang.org/x/crypto v0.1.0
+	golang.org/x/tools v0.1.12
 	google.golang.org/grpc v1.32.0
 )
